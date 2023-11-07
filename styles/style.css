@@ -61,7 +61,7 @@ ol {
 .result__video {
   width: 100%;
   font-size: 18px;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 /*Здесь стиили для блока поиска*/
@@ -100,10 +100,6 @@ ol {
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
   outline-offset: 1px;
-}
-
-.search-form__label-text:focus {
-  outline: 1px solid #fff;
 }
 
 .search-form__label:hover .search-form__label-text {
@@ -146,7 +142,6 @@ ol {
   width: 15px;
   cursor: pointer;
   outline: none;
-  display: flex;
 }
 
 .visually-hidden {
@@ -210,10 +205,6 @@ ol {
   gap: 20px; 
 }
 
-span:first-child {
-  color: #545050;
-}
-
 .title {
   font-family: Oswald, sans-serif;
   font-size: 75px;
@@ -228,7 +219,10 @@ span:first-child {
   flex-direction: column;
   overflow: auto;
   block-size: 298px;
-  gap: 30px;
+}
+
+.content__list-item:not(:last-of-type) {
+  margin-bottom: 30px;
 }
 
 .content__video-card {
@@ -259,6 +253,10 @@ span:first-child {
 
 .content__card-link:hover {
   text-decoration: underline;
+}
+
+.content__card-link:active {
+  background-color:#545050;
 }
 
 .content__video-card-title {
@@ -292,13 +290,4 @@ span:first-child {
 
 .content__card-link_current {
   background-color:#545050;
-  text-decoration: underline;
-}
-
-.content__card-link_current:focus {
-  border: 1px solid #fff;
-}
-
-.content__list-item .content__card-link .content__video-card:hover {
-  text-decoration: underline;
 }
