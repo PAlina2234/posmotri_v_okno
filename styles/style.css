@@ -50,6 +50,10 @@ ol {
   height: 534px;
 }
 
+.content__accent {
+  color: #545050;
+}  
+  
 .result__video-container {
   display: flex;
   flex-direction: column;
